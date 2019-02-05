@@ -1,0 +1,428 @@
+/*
+Theme Name: 	Cleveland TV
+Description: 	Cleveland Television Custom Wordpress Theme
+Author: 		Taylor S. Carter
+Author URI: 	https://www.cleveland.edu/
+Version: 	1.0
+*/
+
+/*
+CONTENTS:
+00: Fonts, Branding, etc.
+01 Cheats, Quick Fixes, Misc.
+02 Sitewide Styles
+03 Media Queries, Mobile Fixes
+04 Cross-Browser Fixes
+*/
+
+
+/* SECTION 00:
+Fonts, Branding, etc. */
+
+h1 {
+  color: #ffffff;
+  text-transform: none;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 5.5rem;
+  line-height: 1;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: #ffffff;
+  text-transform: none;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.25em;
+  line-height: 1.25;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+h3 {
+  color: #fff;
+  text-transform: none;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+h4 {
+  color: #ffffff;
+  text-transform: none;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.25;
+  letter-spacing: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+h5 {
+  color: #444444;
+  text-transform: none;
+  font-family: proxima-nova, sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  text-align: left;
+}
+
+/* TITLES, HEADLINES, etc.
+Proxima Nova CSS
+font-family: proxima-nova, sans-serif;
+font-style: normal;
+
+Proxima Nova Thin
+font-weight: 100;
+
+Proxima Nova Light
+font-weight: 300;
+
+Proxima Nova Regular
+font-weight: 400;
+
+Proxima Nova Medium
+font-weight: 500;
+
+Proxima Nova Semibold
+font-weight: 600;
+
+Proxima Nova Bold
+font-weight: 700;
+
+Proxima Nova Extrabold
+font-weight: 800;
+
+Proxima Nova Black
+font-weight: 900; */
+
+
+/* BODY COPY
+Minion Pro CSS
+font-family: minion-pro, serif;
+
+Minion Pro Regular
+font-weight: 400;
+font-style: normal;
+
+Minion Pro Italic
+font-weight: 400;
+font-style: italic;
+
+Minion Pro Semibold
+font-weight: 600;
+font-style: normal;
+
+Minion Pro Semibold Italic
+font-weight: 600;
+font-style: italic;
+
+Minion Pro Bold
+font-weight: 700;
+font-style: normal;
+Minion Pro Bold Italic
+
+font-weight: 700;
+font-style: italic; */
+
+
+/* AUX. COPY
+Calibri CSS
+font-family: calibri, sans-serif;
+
+Calibri Light
+font-weight: 300;
+font-style: normal;
+
+Calibri Light Italic
+font-weight: 300;
+font-style: italic;
+
+Calibri Regular
+font-weight: 400;
+font-style: normal;
+
+Calibri Italic
+font-weight: 400;
+font-style: italic;
+
+Calibri Bold
+font-weight: 700;
+font-style: normal;
+
+Calibri Bold Italic
+font-weight: 700;
+font-style: italic; */
+
+
+/* TEXT HIGHLIGHT COLOR(s) If You're Feeling RULLL Fancy */
+
+::selection {
+  background: #F0B310; /* WebKit/Blink Browsers */
+  opacity: 0.75;
+}
+::-moz-selection {
+  background: #F0B310; /* Gecko Browsers */
+  opacity: 0.75;
+}
+
+
+/* SECTION 01:
+Cheats, Quick Fixes, Misc. */
+
+/* Sets up our marquee, and inner content */
+.marquee {
+    overflow: hidden;
+    position: relative;
+    padding-left: 100%;
+    /* Some browsers may require -webkit-animation */
+    animation: reduce 75s linear infinite;
+}
+
+        .marquee__inner {
+            white-space: nowrap;
+            display: inline-block;
+            /* Some browsers may require -webkit-animation */
+            animation: scroll 75s linear infinite;
+        }
+
+/* Creates two white-to-transparent gradients at the ends of the marquee */
+.marquee::before, .marquee::after {
+    z-index: 1;
+    bottom: 10; left: 0;
+    position: absolute;
+    width: 50px; height: 40px;
+    content: ""; display: block;
+}
+
+.marquee::after {
+    left: auto; right: 0;
+    transform: rotate(180deg);
+}
+
+@keyframes reduce {
+    to {
+        padding-left: 0;
+    }
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX( -100% );
+    }
+}
+
+#curved_top {
+  -webkit-clip-path: ellipse(77% 100% at 50% 0%);
+  clip-path: ellipse(77% 100% at 50% 0%);
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  border-top: 0px;
+}
+
+#curved_left {
+  -webkit-clip-path: circle(90% at 100% 50%);
+  clip-path: circle(90% at 100% 50%);
+}
+
+#curved_right {
+  -webkit-clip-path: circle(90% at 0% 50%);
+  clip-path: circle(90% at 0% 50%);
+}
+
+#welcome_health {
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+#dyk_health {
+  /* -webkit-clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%); */
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/* SECTION 02:
+Sitewide Styles */
+
+/* NAVIGATION */
+
+.navbar {
+    background-color: #444444;
+}
+
+.navbar-toggle {
+    margin-top: 24px !important;
+}
+
+.navbar-brand>img {
+    display: inline-block;
+    max-width: 300px;
+}
+
+h3#datetime {
+  font-family: proxima-nova, sans-serif;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  padding-top: 30px;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  /* min-width: 510px; */
+  text-align: left;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+    margin-top: 0px;
+    padding: 5px 15px 5px 15px;
+    border: 2.5px solid transparent;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+    color: #ffffff;
+    border: 2.5px solid #bfd855;
+}
+
+
+/* BODY */
+
+.content {
+    font-family: proxima-nova, sans-serif;
+    /*padding-top: 40px;
+    padding-bottom: 40px;
+    color: #f2f2f2;*/
+}
+
+
+/*FOOTER - PADDING, LOGO, NAV, ETC.*/
+
+a.sitetag {
+    color: #fcb034;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.marquee {
+  color: #444444;
+  /* height: 40px; */
+  font-weight: 400;
+}
+
+.marquee p {
+  margin-bottom: 0px;
+  font-size: 2.5rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: #ffffff;
+}
+
+.navbar-bottom .row {
+    text-align: center;
+}
+
+.navbar-bottom {
+    text-transform: none;
+    font-size: 2rem;
+}
+
+.navbar-bottom a:hover {
+    color: #bfd855;
+}
+
+.navbar-bottom img {
+    max-width: 210px;
+    margin-bottom: 15px;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------
+02 Media Queries ----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+
+/* Small Devices ONLY */
+@media only screen and (max-width: 33.9em) {
+}
+
+/* Small devices (landscape phones, 34em and up) */
+@media only screen and (min-width: 34em)
+
+}
+
+/* Medium devices (tablets, 48em and up) */
+@media only screen and (min-width: 48em) {
+
+    h2 {
+        font-size: 4rem;
+    }
+
+}
+
+/* Large devices (desktops, 62em and up) */
+@media only screen and (min-width: 62em) {
+
+}
+
+/* Extra large devices (large desktops, 75em and up) */
+@media only screen and (min-width: 75em) {
+
+    .footer-nav {
+        display: block;
+    }
+
+    .navbar-bottom .row {
+        text-align: left;
+    }
+
+}
+
+/* XXL Large Devices (HD) */
+@media only screen and (min-width: 90em) {
+
+}
+
+/* Larger than XXL Desktop HD */
+@media only screen and (min-width: 120em) {
+
+}
