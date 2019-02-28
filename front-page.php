@@ -18,44 +18,53 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-      <?php if(have_rows('slides')): ?>
-
-          <div class="carousel-inner" role="listbox">
-
-  	       <?php while(have_rows('slides')): the_row(); ?>
-
-
-
-             <?php if( get_field('welcome_screen') ):
-              while ( get_field('welcome_screen') ) : the_row();
-                  the_sub_field('welcome_screen');?>
-
-                <div id="" class="carousel-item active" style="background-image: url('<?php the_sub_field('bg_img'); ?>')">
-                  <div class="carousel-caption d-none d-md-block">
-                    <h3><?php the_sub_field('text'); ?></h3>
-                    <p><?php the_sub_field('subtext'); ?></p>
-                  </div>
-                </div>
-             		<style type="text/css">
-             			#hero {
-             				background: <?php the_sub_field('color'); ?>;
-             			}
-             		</style>
-             	<?php endwhile; ?>
-
-             <?php endif; ?>
-
-
-
-
-      <?php endwhile; ?>
-
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8" style="height: 675px; background-color: #f2f2f2;">
+      </div>
+      <div class="col-md-4" style="padding-left: 0px; padding-right: 0px;">
+        <div style="height: 225px; background-color: rgba(182, 0, 80, 0.8)">
+        </div>
+        <div style="height: 225px; background-color: rgba(253, 163, 31, 0.8)">
+        </div>
+        <div style="height: 225px; background-color: rgba(120, 162, 47, 0.8)">
+        </div>
+      </div>
     </div>
+  </div>
 
-    <?php endif; ?>
+  <div class="container">
+    <div class="row">
+      <br><br><br>
+    </div>
+  </div>
 
+  <div class="container-fluid">
+    <div class="row" style="height: 675px;">
+      <div class="col-md-4" style="background-color: rgba(96, 55, 110, 0.8);">
+      </div>
+      <div class="col-md-8" style="background-color: #f2f2f2;">
+      </div>
+    </div>
+    <div class="row" style="height: 225px;">
+      <div class="col-md-6" style="background-color: rgba(216, 88, 88, 0.8);">
+      </div>
+      <div class="col-md-6" style="background-color: rgba(77, 138, 164, 0.8);">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <br><br><br>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row" style="height: 250px;">
+      <div class="col-md-12" style="background-color: rgba(253, 163, 31, 0.8);">
+      </div>
+    </div>
   </div>
 
 <?php endwhile; ?>

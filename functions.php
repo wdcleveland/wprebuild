@@ -54,8 +54,10 @@
 	/* Custom Post Types - include custom post types and taxonomies here
 	======================================================================================================================== */
 
-	// require_once( 'custom-post-types/locations.php' );
-	// require_once( 'custom-post-types/services.php' );
+	require_once( 'custom-post-types/faculty-staff.php' );
+	require_once( 'custom-post-types/faculty-staff-categories.php' );
+	require_once( 'custom-post-types/events.php' );
+	require_once( 'custom-post-types/events-categories.php' );
 
 
 	/* Removing Crap / Customizing Admin Dashboard
@@ -146,16 +148,16 @@
 	 * @author Keir Whitaker
 	 */
 
-	function starkers_script_enqueuer() {
-
-		wp_deregister_script('jquery');
-		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"), false);
-		wp_enqueue_script('jquery');
-
-		wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
-		wp_enqueue_script( 'site' );
-
-	}
+	// function starkers_script_enqueuer() {
+	//
+	// 	wp_deregister_script('jquery');
+	// 	wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"), false);
+	// 	wp_enqueue_script('jquery');
+	//
+	// 	wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
+	// 	wp_enqueue_script( 'site' );
+	//
+	// }
 
 	// Register Style
 	function custom_styles() {
@@ -176,7 +178,7 @@
 	/**
 	 * Load Bootstrap Menu.
 	 */
-	require get_template_directory() . '/bootstrap-walker.php';
+	// require get_template_directory() . '/bootstrap-walker.php';
 
 	if( function_exists('acf_add_options_page') ) {
 
