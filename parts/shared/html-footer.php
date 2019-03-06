@@ -17,5 +17,16 @@
 	  });
 	</script> -->
 
+	<style>
+
+	div#hp_cta_bottom {
+    background-image: url("<?php the_field('cta_bg_img', 'option'); ?>");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+	
+	</style>
+
 	</body>
 </html>

@@ -69,7 +69,9 @@
 	    </ul>
 	  </div>
 	</nav> -->
-	<?php ubermenu( 'main' ); ?>
+		<div align="" class="row">
+		<?php ubermenu( 'main' ); ?>
+		</div>
 </div>
 
 </header>
