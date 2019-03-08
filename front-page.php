@@ -30,6 +30,14 @@
     position: relative;
   }
 
+  div.main_block:nth-of-type(2) {
+    height: 675px;
+    background-image: url("https://www.cleveland.edu/uploaded/themes/default/images/home/experience.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
   /* 3 RIGHT COLUMNS */
 
   div.img_blocks:nth-of-type(1) {
@@ -152,15 +160,19 @@
       <div class="tab-content" id="testimonialContent">
         <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="testimony-one-tab">
           <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
+          <h3>- John Doe</h3>
         </div>
         <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="testimony-two-tab">
           <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
+          <h3>- Jane Doe</h3>
         </div>
         <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="testimony-three-tab">
           <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
+          <h3>- Jack Doe</h3>
         </div>
         <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="testimony-four-tab">
           <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
+          <h3>- Johnny Doe Jr.</h3>
         </div>
         <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="testimony-five-tab">
           <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
@@ -168,19 +180,37 @@
       </div>
       <ul class="nav nav-tabs nav-justified" id="testimonialTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="testimony-one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="true">Home</a>
+          <a class="nav-link active" id="testimony-one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="true">
+            <div class="student_highlight">
+            </div>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="testimony-two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="three" aria-selected="false">Profile</a>
+          <a class="nav-link" id="testimony-two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="three" aria-selected="false">
+            <div class="student_highlight">
+            </div>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="testimony-three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="two" aria-selected="false">Contact</a>
+          <a class="nav-link" id="testimony-three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="two" aria-selected="false">
+            <div class="student_highlight">
+            </div>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="testimony-four-tab" data-toggle="tab" href="#four" role="tab" aria-controls="four" aria-selected="false">Contact</a>
+          <a class="nav-link" id="testimony-four-tab" data-toggle="tab" href="#four" role="tab" aria-controls="four" aria-selected="false">
+            <div class="student_highlight">
+            </div>
+            <div class="student_link">
+              <!-- <a class="hide_show" href="#">View CUKC Blogs</a> -->
+            </div>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="testimony-five-tab" data-toggle="tab" href="#five" role="tab" aria-controls="five" aria-selected="false">Contact</a>
+          <a class="nav-link" id="testimony-five-tab" data-toggle="tab" href="#five" role="tab" aria-controls="five" aria-selected="false">
+            <div class="student_highlight">
+            </div>
+          </a>
         </li>
       </ul>
     </div>
@@ -203,7 +233,11 @@
             <source src="http://securedata2.finalsite.com/cf76/cleveland/data/media/video/720p/266.mp4?rand=1551714557257" type="video/mp4">
           </video>
       </div>
-      <div class="col-md-8" style="background-color: #f2f2f2;">
+      <div class="main_block col-md-8" style="">
+        <div id="hp_experience">
+          <h1>Experience CUKC</h1>
+          <a class="btn btn-homepage" href="#">Take A Virtual Tour</a>
+        </div>
       </div>
     </div>
     <div align="center" class="row" style="height: 225px;">
@@ -235,16 +269,19 @@
   </div>
 
   <div class="hp_padding">
-    <div class="container">
-      <div id="hp_events" class="row">
-        <div class="col-md-4">
-          <img src="https://www.cleveland.edu/data/news/thumbs/649.512.jpg">
-        </div>
-        <div class="col-md-4">
-          <img src="https://www.cleveland.edu/data/news/thumbs/649.512.jpg">
-        </div>
-        <div class="col-md-4">
-          <img src="https://www.cleveland.edu/data/news/thumbs/649.512.jpg">
+    <div id="hp_events" class="container">
+      <div align="left" class="row">
+        <h2>Our News And Events</h2>
+
+        <div class="col-md-12">
+          <?php $args = array( 'post_type' => 'Event', 'posts_per_page' => 10 );
+          $loop = new WP_Query( $args );
+          while ( $loop->have_posts() ) : $loop->the_post();
+            the_title();
+            echo '<div class="entry-content">';
+            the_content();
+            echo '</div>';
+          endwhile; ?>
         </div>
       </div>
     </div>

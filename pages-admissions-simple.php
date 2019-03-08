@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About (Adv) Page
+ * Template Name: Admissions (Text Only) Page
  * The main template file
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -36,15 +36,15 @@
 
           if( !empty($image) ): ?>
 
-          	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
           <?php endif; ?>
+          <!-- MAIN IMAGE -->
 
-          <?php the_post_thumbnail(); ?>
           <?php the_field('body_content'); ?>
           </div>
 
-          <div class="accordion" id="accordionExample">
+          <!-- <div class="accordion" id="accordionExample">
             <div class="card">
               <div class="card-header" id="headingOne">
                 <h3 class="mb-0">
@@ -115,7 +115,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
       </div>

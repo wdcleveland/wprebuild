@@ -25,7 +25,7 @@
     background-position: center;
     position: relative;
   }
-	
+
 	</style>
 
 	</body>

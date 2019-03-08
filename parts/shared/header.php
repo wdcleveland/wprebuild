@@ -35,8 +35,10 @@
 
 <div class="container">
 	<div align="right" class="row">
-
-		<div align="" class="cta_advisor col-lg-12">
+		<div class="col-lg-3">
+			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="" rel="homepage"><img src="<?php the_field('navigation_logo', 'option'); ?>"></a>
+		</div>
+		<div align="" class="cta_advisor col-lg-9">
 			<ul class="">
 				<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>students-faculty"><i class="fas fa-key"></i> Students &amp; Faculty</a></li>
 				<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni"><i class="fas fa-user"></i> Alumni </a></li>
@@ -69,8 +71,12 @@
 	    </ul>
 	  </div>
 	</nav> -->
-		<div align="" class="row">
+		<div align="right" class="row">
+			<div class="col-lg-4">
+			</div>
+			<div class="col-lg-8">
 		<?php ubermenu( 'main' ); ?>
+			</div>
 		</div>
 </div>
 

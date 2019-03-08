@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About (Text Only) Page
+ * Template Name: Academics (Text Only) Page
  * The main template file
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -36,11 +36,11 @@
 
           if( !empty($image) ): ?>
 
-          	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
           <?php endif; ?>
+          <!-- MAIN IMAGE -->
 
-          <?php the_post_thumbnail(); ?>
           <?php the_field('body_content'); ?>
           </div>
 
