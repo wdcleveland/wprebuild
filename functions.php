@@ -58,6 +58,8 @@
 	require_once( 'custom-post-types/faculty-staff-categories.php' );
 	require_once( 'custom-post-types/events.php' );
 	require_once( 'custom-post-types/events-categories.php' );
+	require_once( 'custom-post-types/classifieds.php' );
+	require_once( 'custom-post-types/classifieds-categories.php' );
 
 
 	/* Removing Crap / Customizing Admin Dashboard

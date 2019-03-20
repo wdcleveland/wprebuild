@@ -1,0 +1,24 @@
+NOTES
+
+- change image from ARRAY to url
+- add alt text ACF
+- get events on HOMEPAGE
+- comb through CSS
+
+CONTENTS
+
+- About us
+-
+
+
+blog_sidebar
+
+- fix .active class issue (DONE)
+- Find a way to autopopulate all pages in section
+- events/news/blogs pulling
+
+RECRUIT/TRAIN SCOTT
+
+Fix Scotts issue
+Any issues with Jalonna
+E-Book landing page

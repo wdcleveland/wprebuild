@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About (Text Only) Page
+ * Template Name: About (Team) Page
  * The main template file
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -42,6 +42,26 @@
           <!-- MAIN IMAGE -->
 
           <?php the_field('body_content'); ?>
+          </div>
+
+          <div class="page_team row">
+            <?php
+            $args = array( 'post_type' => 'Employee',  'department' => 'administration', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' );
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post();
+              echo '<div class="team_single col-md-4"><img src="';
+              the_field('headshot');
+              echo '" alt="';
+              the_field('custom_alt_text');
+              echo '"/><a href="';
+              esc_url( the_permalink() );
+              echo '"><h3>';
+              the_title();
+              echo '</h3></a>';
+              the_field('departments');
+              echo '</div>';
+
+            endwhile; ?>
           </div>
 
         </div>

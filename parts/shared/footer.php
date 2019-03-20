@@ -6,7 +6,7 @@
 				<div class="footer_address col-md-4">
 					<img src="<?php the_field('footer_logo', 'option'); ?>">
 					<p><?php the_field('address', 'option'); ?></p>
-					<a href="<?php the_field('contact_url', 'option'); ?>">Contact Us</a>
+					<a href="<?php the_field('contact_url', 'option'); ?>">Contact Us <i class="fas fa-angle-double-right"></i></a>
 				</div>
 				<div class="footer_links col-md-4">
 					<a href="<?php the_field('facebook_url', 'option'); ?>" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
@@ -19,13 +19,13 @@
 						<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni-events/send-a-student" data-page-name="Send A Student">Refer a Student</a></li>
 						<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>calendar" data-page-name="Calendar">View Calendar</a></li>
 						<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/request-transcript" data-page-name="Request Transcript">Request my Transcript</a></li>
-						<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/consumer-information" target="_blank" title="Consumer Information">Consumer Information</a></li>
+						<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/consumer-information" target="" title="Consumer Information">Consumer Information</a></li>
 					</ul>
 				</div>
 				<div align="left" class="footer_health col-md-4">
 					<h3><?php the_field('heading', 'option'); ?></h3>
 					<?php the_field('description', 'option'); ?>
-					<a href="<?php the_field('appointment_url', 'option'); ?>" target="_blank">Schedule an Appointment</a>
+					<a href="<?php the_field('appointment_url', 'option'); ?>" target="_blank">Schedule an Appointment <i class="fas fa-angle-double-right"></i></a>
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About (Text Only) Page
+ * Template Name: Alumni (Text Only) Page
  * The main template file
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -55,17 +55,28 @@
         <div>
           <nav class="blog_side_nav">
 
-          	<ul>
-          		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/why-cleveland/">Why Cleveland?</a></li>
-          		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/the-cleveland-story/">The Cleveland Story</a></li>
-          		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/cleveland-at-a-glance/">Cleveland at a Glance</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/board-of-trustees/">Board Of Trustees</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/administration/">Administration</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/accreditation/">Accreditation</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/consumer-information/">Consumer Information</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/employment/">Employment</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/contact-cleveland/">Contact Cleveland</a></li>
-          	</ul>
+            <ul>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni-events/">Alumni Events</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/alumni-association/">Alumni Association</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/continuing-education/">Continuing Education</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/continuing-education/seminar-schedule/">Seminar Schedule</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/continuing-education/policies-and-procedures/">Policies and Procedures</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/student-recruiting-referral/">Student Recruitment & Referral</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/career-resources/">Career Resources</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/classifieds/">Classifieds</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/envoy-program/">Admissions Envoy Networks</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/reques-transcript/">Request Transcript</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/url/">Cleveland College Foundation</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/scholarships-memorials/">Scholarships & Memorials</a></li>
+                <li><a target="_blank" href="http://plannedgiving.cleveland.edu/">Planned Giving</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving//the-cleveland-legacy-society/">The Cleveland Legacy Society</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/gifts-in-kind/">Gifts In Kind</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/annual-giving-fund/">Give to the Cleveland College Foundation Fund</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/foundation-banquet-rsvp/">Scholarship and Awards Banquet RSVP</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/foundation-scholarship-application/">Foundation Scholarship Application</a></li>
+
+
+            </ul>
 
           </nav>
 

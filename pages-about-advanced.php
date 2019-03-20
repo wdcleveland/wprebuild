@@ -36,7 +36,7 @@
 
             if( !empty($image) ): ?>
 
-            	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+              <img class="main_image" src="<?php echo $image['url']; ?>" alt="<?php the_field('custom_alt_text'); ?>" />
 
             <?php endif; ?>
 
@@ -104,8 +104,41 @@
         </div>
       </div>
 
-  		<div class="col-md-3 blog_sidebar">
-  			<a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a>
+      <div class="col-md-3 blog_sidebar">
+        <div>
+          <nav class="blog_side_nav">
+
+          	<ul>
+          		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/why-cleveland/">Why Cleveland?</a></li>
+          		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/the-cleveland-story/">The Cleveland Story</a></li>
+          		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/cleveland-at-a-glance/">Cleveland at a Glance</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/board-of-trustees/">Board Of Trustees</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/administration/">Administration</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/accreditation/">Accreditation</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/consumer-information/">Consumer Information</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/employment/">Employment</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/contact-cleveland/">Contact Cleveland</a></li>
+          	</ul>
+
+          </nav>
+
+          <script>
+
+          $(document).ready(function() {
+            console.log(window.location.protocol + "//");
+            console.log(window.location.host);
+            console.log(window.location.pathname);
+          	// get current URL path and assign 'active' class
+            var host = window.location.protocol + "//";
+            var protocol = window.location.host;
+            var pathname = window.location.pathname;
+          	$('.blog_side_nav > ul > li > a[href="'+host+protocol+pathname+'"]').addClass('active');
+          })
+
+          </script>
+
+        </div>
+  			<!-- <a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a> -->
         <a id="blog_refer_student" href="https://www.cleveland.edu/alumni-events/send-a-student" class="btn btn-primary">CleveLand At A Glance</a>
   			<div class="blog_events">
   				<h2>News</h2>

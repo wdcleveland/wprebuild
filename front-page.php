@@ -176,6 +176,7 @@
         </div>
         <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="testimony-five-tab">
           <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
+          <h3>- Jim Doe</h3>
         </div>
       </div>
       <ul class="nav nav-tabs nav-justified" id="testimonialTab" role="tablist">
@@ -270,19 +271,28 @@
 
   <div class="hp_padding">
     <div id="hp_events" class="container">
-      <div align="left" class="row">
-        <h2>Our News And Events</h2>
-
-        <div class="col-md-12">
-          <?php $args = array( 'post_type' => 'Event', 'posts_per_page' => 10 );
-          $loop = new WP_Query( $args );
-          while ( $loop->have_posts() ) : $loop->the_post();
-            the_title();
-            echo '<div class="entry-content">';
-            the_content();
-            echo '</div>';
-          endwhile; ?>
+      <div align="" class="row">
+        <div align="left" class="col-md-4">
+          <h2>Our News And Events</h2>
         </div>
+        <div align="right" class="col-md-8">
+          <a href="#">View All News <i class="fas fa-angle-double-right"></i></a>
+        </div>
+      </div>
+      <div class="row hp_news_events">
+        <?php $args = array( 'post_type' => 'Event', 'posts_per_page' => 3 );
+        $loop = new WP_Query( $args );
+        while ( $loop->have_posts() ) : $loop->the_post();
+          echo '<div class="col-md-4"><time datetime="';
+          the_time( 'Y-m-d' );
+          echo '"pubdate>Posted ';
+          the_date();
+          echo '</time><br><a href="';
+          esc_url( the_permalink() );
+          echo '"><h1>';
+          the_title();
+          echo '</h1></a></div>';
+        endwhile; ?>
       </div>
     </div>
   </div>

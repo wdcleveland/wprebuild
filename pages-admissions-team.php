@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Admissions (Adv) Page
+ * Template Name: Admissions (Team) Page
  * The main template file
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -27,84 +27,51 @@
   		<div class="col-md-9 page_header page_about">
         <div class="row">
           <div class="col-md-12">
-  			    <h1><?php the_title(); ?></h1>
+    			<h1><?php the_title(); ?></h1>
 
-            <!-- MAIN IMAGE -->
-            <?php
+          <!-- MAIN IMAGE -->
+          <?php
 
-            $image = get_field('main_img');
+          $image = get_field('main_img');
 
-            if( !empty($image) ): ?>
+          if( !empty($image) ): ?>
 
             <img class="main_image" src="<?php echo $image['url']; ?>" alt="<?php the_field('custom_alt_text'); ?>" />
 
-            <?php endif; ?>
+          <?php endif; ?>
+          <!-- MAIN IMAGE -->
 
-            <?php the_post_thumbnail(); ?>
-
-            <!-- PAGE BLOCKS -->
-
-            <?php if( get_field('page_blocks') ): ?>
-
-             <div class="col-md-12">
-
-               <?php while( has_sub_field("page_blocks") ): ?>
-
-                 <?php if(get_row_layout() == "paragraph_block"): // BLOCK - paragraph(s) ?>
-
-                   <?php the_sub_field('paragraph_text'); ?>
-
-                 <?php elseif(get_row_layout() == "image_block"): // BLOCK - additional image(s) ?>
-
-                   <?php
-                   $image = get_field('additional_img');
-                   if( !empty($image) ): ?>
-                   	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                   <?php endif; ?>
-
-                 <?php elseif(get_row_layout() == "accordion_block"): // BLOCK - accordion(s) ?>
-
-                   <?php if( have_rows('accordion_content') ): ?>
-            				<div id="accordion" role="tablist">
-            					<?php $i=1; while ( have_rows('accordion_content') ) : the_row(); ?>
-            						<div class="card">
-          						    <div class="card-header" role="tab" id="heading-<?php echo $i; ?>">
-          						      <h3 class="mb-0">
-          						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" href="#collapse-<?php echo $i; ?>" aria-expanded="true" aria-controls="collapseOne">
-                                <div class="row">
-                                  <div align="left" class="col-md-10">
-                                    <?php the_sub_field('item_title'); ?>
-                                  </div>
-                                  <div align="right" class="col-md-2">
-                                    <i class="fas fa-plus-circle"></i><i class="fas fa-minus-circle"></i>
-                                  </div>
-                                </div>
-          						        </button>
-          						      </h3>
-          						    </div>
-            						    <div id="collapse-<?php echo $i; ?>" class="collapse" role="tabpanel" data-parent="#accordion" aria-labelledby="heading-<?php echo $i; ?>">
-            						      <div class="card-body">
-            						       	<?php the_sub_field('item_description'); ?>
-            						      </div>
-            						    </div>
-            						</div>
-            					<?php $i++; endwhile; ?>
-            				</div>
-            			<?php endif; ?>
-
-                 <?php endif; ?>
-
-               <?php endwhile; ?>
-
-             </div>
-
-             <?php endif; ?>
-
+          <?php the_field('body_content'); ?>
           </div>
+
+          <div class="page_team row">
+            <?php
+            $args = array( 'post_type' => 'Employee',  'department' => 'admissions', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' );
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post();
+              echo '<div class="team_single col-md-6"><img src="';
+              the_field('headshot');
+              echo '" alt="';
+              the_field('custom_alt_text');
+              echo '"/><a href="';
+              esc_url( the_permalink() );
+              echo '"><h3>';
+              the_title();
+              echo '</h3></a>';
+              the_field('departments');
+              echo '</div>';
+
+            endwhile; ?>
+          </div>
+
         </div>
       </div>
 
-      <div class="col-md-3 blog_sidebar">
+
+
+
+
+  		<div class="col-md-3 blog_sidebar">
         <div>
           <nav class="blog_side_nav">
 
@@ -116,7 +83,7 @@
                 <!-- <ul> -->
                   <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/process/">Financial Aid Process</a></li>
                   <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/scholarships-grants/">Scholarships & Grants</a></li>
-                  <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/scholarships-grants/scholarship-application/">Scholarship Application</a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/scholarships-grants/scholarship-application/">Scholarship Application</a></li>
                   <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/resources/">Financial Aid Resources</a></li>
                   <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/faq/">FAQ</a></li>
                 <!-- </ul> -->
@@ -140,24 +107,24 @@
             console.log(window.location.protocol + "//");
             console.log(window.location.host);
             console.log(window.location.pathname);
-            // get current URL path and assign 'active' class
+          	// get current URL path and assign 'active' class
             var host = window.location.protocol + "//";
             var protocol = window.location.host;
             var pathname = window.location.pathname;
-            $('.blog_side_nav > ul > li > a[href="'+host+protocol+pathname+'"]').addClass('active');
+          	$('.blog_side_nav > ul > li > a[href="'+host+protocol+pathname+'"]').addClass('active');
           })
 
           </script>
 
         </div>
-        <!-- <a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a> -->
+  			<!-- <a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a> -->
         <a id="blog_refer_student" href="https://www.cleveland.edu/alumni-events/send-a-student" class="btn btn-primary">CleveLand At A Glance</a>
-        <div class="blog_events">
-          <h2>News</h2>
-          <a href="https://www.cleveland.edu/about-us/cleveland-at-a-glance" class="btn btn-primary">View All News</a>
-        </div>
-      </div>
-    </div>
+  			<div class="blog_events">
+  				<h2>News</h2>
+  				<a href="https://www.cleveland.edu/about-us/cleveland-at-a-glance" class="btn btn-primary">View All News</a>
+  			</div>
+  		</div>
+  	</div>
   </div>
 
   <div class="container-fluid">
@@ -168,7 +135,6 @@
       </div>
     </div>
   </div>
-
 
 <?php endwhile; ?>
 

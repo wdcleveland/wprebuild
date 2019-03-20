@@ -36,7 +36,7 @@
 
           if( !empty($image) ): ?>
 
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+          <img class="main_image" src="<?php echo $image['url']; ?>" alt="<?php the_field('custom_alt_text'); ?>" />
 
           <?php endif; ?>
           <!-- MAIN IMAGE -->
@@ -124,8 +124,53 @@
 
 
 
-  		<div class="col-md-3 blog_sidebar">
-  			<a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a>
+      <div class="col-md-3 blog_sidebar">
+        <div>
+          <nav class="blog_side_nav">
+
+          	<ul>
+          		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-chiropractic/">College of Chiropractic</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-chiropractic/doctor-of-chiropractic/">Doctor of Chiropractic</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-chiropractic/concurrent-dcbs-program/">Concurrent DC/BS Program</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-chiropractic/doctor-of-chiropractic-landing/">Be the Difference in Health Care</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/">College of Health Sciences</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/ms-in-health-promotion/">MS in Health Education and Promotion</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/bs-in-human-biology/">BS in Human Biology</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics//college-of-health-sciences/accelerated-health-sciences/">AA in Biological Sciences</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics//college-of-health-sciences/occupational-therapy-assistant-degree/">AAS in Occupational Therapy Assistant</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/radiologic-technology-degree/">AAS Degree in Radiologic Technology</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/workplace-health-promotion-certificate/">Workplace Health Promotion Certificate</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/degrees-and-certifications/">Degrees & Certifications</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/university-catalogs/">University Catalogs</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/academic-calendar/">Academic Calendar</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/faculty/">Faculty</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/library/">Library</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/internships-clinical-experience/">Internships & Clinical Experience</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/online-degrees/">Online Degrees</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/dc-ebook/">Your Complete Guide to the Chiropractic Profession</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/radtech-ebook/">Your Complete Guide to Becoming a Radiologic Technologist</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/graduation/">Graduation</a></li>
+          	</ul>
+
+          </nav>
+
+          <script>
+
+          $(document).ready(function() {
+            console.log(window.location.protocol + "//");
+            console.log(window.location.host);
+            console.log(window.location.pathname);
+          	// get current URL path and assign 'active' class
+            var host = window.location.protocol + "//";
+            var protocol = window.location.host;
+            var pathname = window.location.pathname;
+          	$('.blog_side_nav > ul > li > a[href="'+host+protocol+pathname+'"]').addClass('active');
+          })
+
+          </script>
+
+        </div>
+  			<!-- <a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a> -->
         <a id="blog_refer_student" href="https://www.cleveland.edu/alumni-events/send-a-student" class="btn btn-primary">CleveLand At A Glance</a>
   			<div class="blog_events">
   				<h2>News</h2>

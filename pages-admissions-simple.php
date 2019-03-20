@@ -36,86 +36,13 @@
 
           if( !empty($image) ): ?>
 
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <img class="main_image" src="<?php echo $image['url']; ?>" alt="<?php the_field('custom_alt_text'); ?>" />
 
           <?php endif; ?>
           <!-- MAIN IMAGE -->
 
           <?php the_field('body_content'); ?>
           </div>
-
-          <!-- <div class="accordion" id="accordionExample">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h3 class="mb-0">
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <div class="row">
-                      <div align="left" class="col-md-10">
-                        Our Mission
-                      </div>
-                      <div align="right" class="col-md-2">
-                        <i class="fas fa-plus-circle"></i>
-                      </div>
-                    </div>
-                  </button>
-                </h3>
-              </div>
-
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>
-                    The Cleveland vision is to be recognized and respected as a leader in health promotion.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h3 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <div class="row">
-                      <div align="left" class="col-md-10">
-                        Our Mission
-                      </div>
-                      <div align="right" class="col-md-2">
-                        <i class="fas fa-plus-circle"></i>
-                      </div>
-                    </div>
-                  </button>
-                </h3>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>
-                    The Cleveland mission is to provide strong student-centered academic and professional education with a focus in the areas of life sciences and health promotion through education, scholarship and service.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <h3 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <div class="row">
-                      <div align="left" class="col-md-10">
-                        Our Mission
-                      </div>
-                      <div align="right" class="col-md-2">
-                        <i class="fas fa-plus-circle"></i>
-                      </div>
-                    </div>
-                  </button>
-                </h3>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>
-                    Test. Test. Test.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> -->
 
         </div>
       </div>
@@ -125,7 +52,52 @@
 
 
   		<div class="col-md-3 blog_sidebar">
-  			<a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a>
+        <div>
+          <nav class="blog_side_nav">
+
+            <ul>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/admission-requirements/">Admission Requirements</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/tuition-costs/">Tuition & Costs</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/transfer-guides/">Transfer Guides</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/">Financial Aid & Scholarships</a></li>
+                <!-- <ul> -->
+                  <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/process/">Financial Aid Process</a></li>
+                  <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/scholarships-grants/">Scholarships & Grants</a></li>
+                  <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/scholarships-grants/scholarship-application/">Scholarship Application</a></li>
+                  <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/resources/">Financial Aid Resources</a></li>
+                  <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/financial-aid-scholarships/faq/">FAQ</a></li>
+                <!-- </ul> -->
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/open-house-schedule/">Open House Schedule</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/visit-campus/">Visit Campus</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/how-to-apply/">How to Apply</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/request-information/">Request Information</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/refer-friend/">Refer a Friend</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/admissions-team/">Admissions Team</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/for-parents/">For Parents</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/for-advisors-counselors/">For Advisors & Counselors</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/admission-application/">Application for Admission</a></li>
+
+            </ul>
+
+          </nav>
+
+          <script>
+
+          $(document).ready(function() {
+            console.log(window.location.protocol + "//");
+            console.log(window.location.host);
+            console.log(window.location.pathname);
+          	// get current URL path and assign 'active' class
+            var host = window.location.protocol + "//";
+            var protocol = window.location.host;
+            var pathname = window.location.pathname;
+          	$('.blog_side_nav > ul > li > a[href="'+host+protocol+pathname+'"]').addClass('active');
+          })
+
+          </script>
+
+        </div>
+  			<!-- <a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a> -->
         <a id="blog_refer_student" href="https://www.cleveland.edu/alumni-events/send-a-student" class="btn btn-primary">CleveLand At A Glance</a>
   			<div class="blog_events">
   				<h2>News</h2>

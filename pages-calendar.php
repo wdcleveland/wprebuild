@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About (Text Only) Page
+ * Template Name: Calendar Page
  * The main template file
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -44,6 +44,39 @@
           <?php the_field('body_content'); ?>
           </div>
 
+          <div class="page_calendar ">
+            <?php
+            $args = array( 'post_type' => 'Event',  'event-type' => 'Main Calendar', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' );
+            $loop = new WP_Query( $args );
+            while ( $loop->have_posts() ) : $loop->the_post();
+              echo '<div class="event_single row"><div align="center" class="col-md-2"><div class="calendar_bg"><div class="calendar_month">';
+              // echo $date->format('M');
+              if(get_field('date'))
+              		{
+              			$date = DateTime::createFromFormat('F j, Y', get_field('date'));
+                    echo $date->format('M');
+                    echo '</div><div class="calendar_day">';
+                    echo $date->format('j');
+              		}
+              // echo '</div><div class="calendar_day">';
+              // echo $date->format('j');
+              echo '</div></div></div><div class="col-md-10"><a href="';
+              esc_url( the_permalink() );
+              echo '">';
+              the_field('display_name');
+              echo '</a><p class="event_date_time"><i class="far fa-clock"></i>';
+              the_field('start_time');
+              echo ' - ';
+              the_field('end_time');
+              echo'<br><i class="fas fa-map-marker-alt"></i>';
+              the_field('location');
+              echo'</p><a class="btn btn-primary" href="';
+              esc_url( the_permalink() );
+              echo '">Learn More</a></div></div>';
+
+            endwhile; ?>
+          </div>
+
         </div>
       </div>
 
@@ -53,21 +86,6 @@
 
   		<div class="col-md-3 blog_sidebar">
         <div>
-          <nav class="blog_side_nav">
-
-          	<ul>
-          		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/why-cleveland/">Why Cleveland?</a></li>
-          		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/the-cleveland-story/">The Cleveland Story</a></li>
-          		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/cleveland-at-a-glance/">Cleveland at a Glance</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/board-of-trustees/">Board Of Trustees</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/administration/">Administration</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/accreditation/">Accreditation</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/consumer-information/">Consumer Information</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/employment/">Employment</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/contact-cleveland/">Contact Cleveland</a></li>
-          	</ul>
-
-          </nav>
 
           <script>
 
