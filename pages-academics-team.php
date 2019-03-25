@@ -44,7 +44,7 @@
           <?php the_field('body_content'); ?>
           </div>
 
-          <div class="page_team row">
+          <div align="center" class="page_team row">
             <?php
             $args = array( 'post_type' => 'Employee',  'department' => 'faculty', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' );
             $loop = new WP_Query( $args );
@@ -58,7 +58,7 @@
               echo '"><h3>';
               the_title();
               echo '</h3></a>';
-              the_field('departments');
+              the_field('titles');
               echo '</div>';
 
             endwhile; ?>

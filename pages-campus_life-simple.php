@@ -64,7 +64,7 @@
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>campus-life/students-with-disabilities/">Students With Disabilities</a></li>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>campus-life/academic-records-support/">Academic Records & Support</a></li>
             <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>campus-life/about-kansas-city/">About Kansas City</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>campus-life/it-support-help-desk/">IT Support Help Deask</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>campus-life/it-support-help-desk/">IT Support Help Desk</a></li>
           </ul>
 
         </nav>

@@ -17,6 +17,9 @@
 		<div class="page_header page_about">
 				<div class="page_calendar">
 					<div class="event_single row">
+						<div class="col-md-12">
+							<h2><?php the_field('display_name') ?></h2>
+						</div>
 						<div align="center" class="col-md-1">
 							<?php
 								if(get_field('date'))
@@ -31,9 +34,9 @@
 							?>
 						</div>
 						<div class="col-md-11">
-							<a href="<?php esc_url( the_permalink() ) ?>"><?php the_field('display_name') ?></a>
+
 							<p class="event_date_time">
-								<i class="far fa-clock"></i><?php the_field('start_time') ?> - <?php the_field('end_time') ?></i>
+								<i class="far fa-clock"></i> <?php the_field('start_time') ?> - <?php the_field('end_time') ?></i>
 								<br>
 								<i class="fas fa-map-marker-alt"></i> <?php the_field('location') ?></i>
 							</p>
