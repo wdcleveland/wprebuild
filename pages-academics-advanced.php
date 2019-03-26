@@ -116,8 +116,8 @@
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/">College of Health Sciences</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/ms-in-health-promotion/">MS in Health Education and Promotion</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/bs-in-human-biology/">BS in Human Biology</a></li>
-                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics//college-of-health-sciences/accelerated-health-sciences/">AA in Biological Sciences</a></li>
-                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics//college-of-health-sciences/occupational-therapy-assistant-degree/">AAS in Occupational Therapy Assistant</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/accelerated-health-sciences/">AA in Biological Sciences</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/occupational-therapy-assistant-degree/">AAS in Occupational Therapy Assistant</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/radiologic-technology-degree/">AAS Degree in Radiologic Technology</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/college-of-health-sciences/workplace-health-promotion-certificate/">Workplace Health Promotion Certificate</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/degrees-and-certifications/">Degrees & Certifications</a></li>

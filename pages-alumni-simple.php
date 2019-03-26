@@ -65,11 +65,11 @@
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/career-resources/">Career Resources</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/classifieds/">Classifieds</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/envoy-program/">Admissions Envoy Networks</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/reques-transcript/">Request Transcript</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/url/">Cleveland College Foundation</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/request-transcript/">Request Transcript</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/">Cleveland College Foundation</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/scholarships-memorials/">Scholarships & Memorials</a></li>
                 <li><a target="_blank" href="http://plannedgiving.cleveland.edu/">Planned Giving</a></li>
-                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving//the-cleveland-legacy-society/">The Cleveland Legacy Society</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/the-cleveland-legacy-society/">The Cleveland Legacy Society</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/gifts-in-kind/">Gifts In Kind</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/annual-giving-fund/">Give to the Cleveland College Foundation Fund</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/foundation-banquet-rsvp/">Scholarship and Awards Banquet RSVP</a></li>

@@ -66,7 +66,7 @@
 
   div.col-md-6.img_background:nth-child(1) {
     height: 225px;
-      padding: 0px;
+    padding: 0px;
     background-image: url("https://www.cleveland.edu/uploaded/themes/default/images/home/cu-04.jpg");
     background-size: cover;
     background-position: center;
@@ -283,7 +283,11 @@
         <?php $args = array( 'post_type' => 'Event', 'posts_per_page' => 3 );
         $loop = new WP_Query( $args );
         while ( $loop->have_posts() ) : $loop->the_post();
-          echo '<div class="col-md-4"><time datetime="';
+          echo '<div class="col-md-4"><img src="';
+          the_field('headshot');
+          echo '" alt="';
+          the_field('custom_alt_text');
+          echo '"/><time datetime="';
           the_time( 'Y-m-d' );
           echo '"pubdate>Posted ';
           the_date();

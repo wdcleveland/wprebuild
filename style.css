@@ -814,7 +814,7 @@ div#hp_main h1 {
   font-weight: normal;
   color: #ffffff;
   letter-spacing: normal;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 3.1rem;
   font-family: "minion-pro", serif;
   word-wrap: break-word;
@@ -822,8 +822,8 @@ div#hp_main h1 {
 }
 
 div#hp_main a.btn.btn-homepage {
-  font-size: 1.5rem;
-  padding: 20px 30px;
+  font-size: 12px;
+  padding: 10px 15px;
 }
 
 /* BUTTONS */
@@ -1147,6 +1147,30 @@ div#hp_kansascity:hover {
   z-index: 1;
 }
 
+/* .hp_video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 225px;
+  width: auto;
+  height: 225px;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.hp_video #hp_kansascity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 225px;
+  width: 100%;
+  z-index: 1;
+} */
+
 
 .hp_video h2 {
   color: #ffffff;
@@ -1298,7 +1322,7 @@ div.row.hp_news_events a:hover {
   font-family: minion-pro, serif;
   color: #ffffff;
   font-weight: 200;
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: capitalize;
   padding-top: 3.5rem;
   margin-bottom: 1.75rem;
@@ -1306,7 +1330,8 @@ div.row.hp_news_events a:hover {
 
 div#hp_cta_bottom a.btn.btn-homepage {
   margin-top: 0rem;
-  font-size: 1rem;
+  font-size: 12px;
+  padding: 10px 15px;
   background-color: rgba(0, 0, 0, 0.0);
 }
 
@@ -1571,8 +1596,13 @@ div.footer_links p {
   margin: 40px 0px 20px 0px;
 }
 
+div.footer_links {
+  padding: 20px 30px;
+}
+
 .footer_links a {
-  margin-right: 20px;
+  margin-right: 10px;
+  font-weight: 400;
 }
 
 .footer_links ul li a {
@@ -1580,13 +1610,13 @@ div.footer_links p {
 }
 
 .footer_links a i {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1;
   text-align: center;
   color: #ffffff;
   position: relative;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 100%;
   /* border: .1em solid currentColor; */
   border: 2px solid #808084;
@@ -1615,11 +1645,15 @@ div.footer_links p {
   margin-bottom: 15px;
 }
 
+div.footer_address {
+  padding: 20px 30px;
+}
+
 div.footer_address p {
   color: #C9CACC;
   font-size: 18px;
   font-weight: 600;
-  padding-left: 40px;
+  padding-left: 0px;
 }
 
 div.footer_address a {
@@ -1628,7 +1662,7 @@ div.footer_address a {
   color: #78a22f;
   -webkit-transition: background .3s, color .3s;
   transition: background .3s, color .3s;
-  padding-left: 40px;
+  padding-left: 0px;
 }
 
 div.footer_address a:hover {
@@ -1636,9 +1670,9 @@ div.footer_address a:hover {
 }
 
 div.footer_health {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 2px solid #808084;
-  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.0);
+  border: none;
+  padding: 20px 30px;
 }
 
 div.footer_health h3 {
@@ -1673,6 +1707,10 @@ div.footer_copyright {
   background-color: #363636;
 }
 
+div.footer_copyright .col-md-6 {
+  text-align: center;
+}
+
 div.footer_copyright p {
   margin: 0px;
   padding: 20px 0px;
@@ -1680,7 +1718,7 @@ div.footer_copyright p {
   color: #C9CACC;
   letter-spacing: normal;
   font-size: 13px;
-  line-height: 1.2058823529em;
+  line-height: 1;
 }
 
 div.footer_copyright ul {
@@ -1697,6 +1735,8 @@ div.footer_copyright ul li {
   padding-right: 15px;
   border-right: solid 1px #C9CACC;
   margin: 20px 0px;
+  line-height: 1;
+
 }
 
 div.footer_copyright ul li:last-child {
@@ -1741,6 +1781,46 @@ div.footer_copyright ul li a:hover {
         font-size: 4rem;
     }
 
+    div#hp_main h1 {
+      font-size: 3rem;
+    }
+
+    div#hp_main a.btn.btn-homepage {
+      font-size: 16px;
+      padding: 20px 30px;
+    }
+
+    #hp_cta_bottom h1 {
+      font-family: minion-pro, serif;
+      color: #ffffff;
+      font-weight: 200;
+      font-size: 3rem;
+      text-transform: capitalize;
+      padding-top: 3.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    div#hp_cta_bottom a.btn.btn-homepage {
+      font-size: 16px;
+      padding: 20px 30px;
+    }
+
+
+
+    div.footer_copyright .col-md-6:first-child {
+      text-align: left;
+    }
+
+    div.footer_copyright .col-md-6:last-child {
+      text-align: right;
+    }
+
+    div.footer_health {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid #808084;
+      padding: 20px;
+    }
+
 
 }
 
@@ -1766,6 +1846,29 @@ div.footer_copyright ul li a:hover {
 
     .navbar-bottom .row {
         /* text-align: left; */
+    }
+
+    .footer_links a i {
+      font-size: 1.5rem;
+      line-height: 1;
+      height: 50px;
+      width: 50px;
+    }
+
+    .footer_links a {
+      margin-right: 20px;
+    }
+
+    div.footer_address p {
+      color: #C9CACC;
+      font-size: 18px;
+      font-weight: 600;
+      padding-left: 40px;
+    }
+
+    div.footer_address a {
+      padding-left: 40px;
+
     }
 
 }

@@ -3,12 +3,12 @@
 	<div class="navbar-bottom">
 		<div class="container">
 			<div class="row">
-				<div class="footer_address col-md-4">
+				<div class="footer_address col-lg-4 col-md-6 col-sm-12">
 					<img src="<?php the_field('footer_logo', 'option'); ?>">
 					<p><?php the_field('address', 'option'); ?></p>
 					<a href="<?php the_field('contact_url', 'option'); ?>">Contact Us <i class="fas fa-angle-double-right"></i></a>
 				</div>
-				<div class="footer_links col-md-4">
+				<div class="footer_links col-lg-4 col-md-6 col-sm-12">
 					<a href="<?php the_field('facebook_url', 'option'); ?>" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
 					<a href="<?php the_field('instagram_url', 'option'); ?>" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
 					<a href="<?php the_field('twitter_url', 'option'); ?>" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>
@@ -22,7 +22,7 @@
 						<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/consumer-information" target="" title="Consumer Information">Consumer Information</a></li>
 					</ul>
 				</div>
-				<div align="left" class="footer_health col-md-4">
+				<div align="left" class="footer_health col-lg-4 col-md-12">
 					<h3><?php the_field('heading', 'option'); ?></h3>
 					<?php the_field('description', 'option'); ?>
 					<a href="<?php the_field('appointment_url', 'option'); ?>" target="_blank">Schedule an Appointment <i class="fas fa-angle-double-right"></i></a>
@@ -32,7 +32,7 @@
 		<div class="footer_copyright container-fluid">
 			<div class="container">
 				<div class="row">
-					<div align="left" class="col-md-6">
+					<div align="" class="col-md-6">
 						<ul>
 						  <li>
 						    <a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us/employment" data-page-name="Employment">Employment</a>
@@ -45,7 +45,7 @@
 						  </li>
 						</ul>
 					</div>
-					<div align="right" class="col-md-6">
+					<div align="" class="col-md-6">
 						<p><?php the_field('copyright', 'option'); ?></p>
 					</div>
 				</div>
