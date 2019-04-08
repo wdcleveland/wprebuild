@@ -1,0 +1,90 @@
+Academics
+Admissions
+Campus Life
+About Us
+Alumni
+
+URLs
+  Correct?
+  Broken?
+
+TITLE
+  Correct?
+
+Hero IMAGE
+  Correct Image?
+  Correct Alt Text?
+
+BODY COPY
+  Proper Styling
+    H1, H2, etc
+  Check Links
+    Broken Links?
+
+ACCORDIONS
+  Text
+    Correct TITLES
+    Proper Styling
+    Broken links?
+    Test open/close functionality
+      Works?
+
+FORM(s) - If Applicable
+  Styling
+    Matched look and Feel?
+  CONTENTS
+    Correct Transcription of Fields?
+    Fill OUT FORM (Testing)
+  CONFIRMATION
+    Did form work?
+    Were you redirected or prompted appropriately?
+
+SIDEBAR MENU
+  Correct Section?
+  Current Page is Active Link (SHOULD BE RED)
+  BUTTONS
+    Correct?
+    Missing?
+    Broken Links?
+    Missing New, Events, Etc.
+
+MOBILE/tablets
+  Please, test in tablet, mobile and various in between sizes.
+    Anything appear broken?
+    Anything appear atop or below something it wasn't supposed to be?
+    Missings Links
+    Cuttoff/Oversized text?
+    Images/Buttons legible
+
+
+
+
+Main Events
+Alumni Events
+Seminar schedule
+
+blog
+news
+
+
+
+
+HOMEPAGE
+
+Correct Images?
+Correct links
+Correct Quotes/Images + links
+Correct Hover/Animation
+
+Properly Responsive
+
+Fix MOBILE NAVIGATION
+Fix MOBILE HomePage
+
+
+
+NAVIGATION
+  desktop
+  Mobile
+    HomePage
+    Sidenave

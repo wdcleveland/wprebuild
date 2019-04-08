@@ -28,6 +28,7 @@
         <div class="row">
           <div class="col-md-12">
     			<h1><?php the_title(); ?></h1>
+          <?php the_content(); ?>
 
           <!-- MAIN IMAGE -->
           <?php
@@ -129,12 +130,11 @@
           </script>
 
         </div>
-  			<!-- <a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a> -->
-        <a id="blog_refer_student" href="https://www.cleveland.edu/alumni-events/send-a-student" class="btn btn-primary">CleveLand At A Glance</a>
-  			<div class="blog_events">
-  				<h2>News</h2>
-  				<a href="https://www.cleveland.edu/about-us/cleveland-at-a-glance" class="btn btn-primary">View All News</a>
-  			</div>
+        <a id="" href="<?php echo esc_url( home_url( '/' ) ); ?>university-publications" class="btn btn-primary">Read Our Alumni Publications</a>
+        <a id="" href="<?php echo esc_url( home_url( '/' ) ); ?>alumni-events/send-a-student" class="btn btn-primary">Refer A Student to Cleveland</a>
+        <a id="" href="<?php echo esc_url( home_url( '/' ) ); ?>alumni-news" class="btn btn-primary">Submit Alumni News Here</a>
+        <a id="" href="<?php echo esc_url( home_url( '/' ) ); ?>alumni/cleveland-foundation-giving/annual-giving-fund" class="btn btn-primary">Give</a>
+
   		</div>
   	</div>
   </div>

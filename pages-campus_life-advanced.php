@@ -138,12 +138,49 @@
           </script>
 
         </div>
-        <!-- <a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a> -->
-        <a id="blog_refer_student" href="https://www.cleveland.edu/alumni-events/send-a-student" class="btn btn-primary">CleveLand At A Glance</a>
-        <div class="blog_events">
-          <h2>News</h2>
-          <a href="https://www.cleveland.edu/about-us/cleveland-at-a-glance" class="btn btn-primary">View All News</a>
-        </div>
+        <?php if( have_rows('individual_buttons') ): ?>
+
+            <?php while ( have_rows('individual_buttons') ) : the_row(); ?>
+
+                <a id="" href="<?php the_sub_field('button_url'); ?>" class="btn btn-primary"><?php the_sub_field('button_text'); ?></a>
+
+            <?php endwhile; ?>
+
+        <?php else : ?>
+
+        <?php endif; ?>
+        <div class="sidebar_events">
+  				<h2>Calendar</h2><br>
+          <?php
+          $args = array( 'post_type' => 'Event',  'event-type' => 'Featured (Sidebar)', 'posts_per_page' =>3, 'orderby' => 'menu_order', 'order' => 'ASC' );
+          $loop = new WP_Query( $args );
+          while ( $loop->have_posts() ) : $loop->the_post();
+            echo '<div class="event_single sidebar_padding row"><div align="center" class="sidebar_fix col-lg-4 col-md-2 col-sm-3 col-xs-2"><div class="calendar_bg"><div class="calendar_month">';
+            // echo $date->format('M');
+            if(get_field('date'))
+                {
+                  $date = DateTime::createFromFormat('F j, Y', get_field('date'));
+                  echo $date->format('M');
+                  echo '</div><div class="calendar_day">';
+                  echo $date->format('j');
+                }
+            // echo '</div><div class="calendar_day">';
+            // echo $date->format('j');
+            echo '</div></div></div><div class="sidebar_fix col-lg-8 col-md-10 col-sm-9 col-xs-10"><a href="';
+            esc_url( the_permalink() );
+            echo '">';
+            the_field('display_name');
+            echo '</a><p class="event_date_time"><i class="far fa-clock"></i>';
+            the_field('start_time');
+            echo ' - ';
+            the_field('end_time');
+            echo'<br><i class="fas fa-map-marker-alt"></i>';
+            the_field('location');
+            echo'</p></div></div>';
+
+          endwhile; ?>
+  				<a id="" href="<?php echo esc_url( home_url( '/' ) ); ?>calendar/" class="btn">View All Events</a>
+  			</div>
       </div>
     </div>
   </div>

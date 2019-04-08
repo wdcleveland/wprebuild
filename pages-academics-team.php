@@ -93,7 +93,7 @@
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/faculty/">Faculty</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/library/">Library</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/internships-clinical-experience/">Internships & Clinical Experience</a></li>
-              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/online-degrees/">Online Degrees</a></li>
+              <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/online-degrees/">Online Degree & Online Courses</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/dc-ebook/">Your Complete Guide to the Chiropractic Profession</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/radtech-ebook/">Your Complete Guide to Becoming a Radiologic Technologist</a></li>
               <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>academics/graduation/">Graduation</a></li>
@@ -117,9 +117,21 @@
           </script>
 
         </div>
-  			<!-- <a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a> -->
-        <a id="blog_refer_student" href="https://www.cleveland.edu/alumni-events/send-a-student" class="btn btn-primary">CleveLand At A Glance</a>
-  			<div class="blog_events">
+        <!-- <?php if( have_rows('individual_buttons') ): ?>
+
+            <?php while ( have_rows('individual_buttons') ) : the_row(); ?>
+
+              <a id="" href="<?php echo esc_url( home_url( '/' ) ); ?><?php the_sub_field('button_url'); ?>" class="btn btn-primary"><?php the_sub_field('button_text'); ?></a>
+
+            <?php endwhile; ?>
+
+        <?php else : ?>
+
+        <?php endif; ?> -->
+        <a id="" href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/visit-campus" class="btn btn-primary">Campus Tour</a>
+        <a id="" href="<?php echo esc_url( home_url( '/' ) ); ?>alumni-events/send-a-student" class="btn btn-primary">Refer A Student To Cleveland</a>
+
+        <div class="blog_events">
   				<h2>News</h2>
   				<a href="https://www.cleveland.edu/about-us/cleveland-at-a-glance" class="btn btn-primary">View All News</a>
   			</div>

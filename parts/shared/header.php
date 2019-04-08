@@ -33,12 +33,12 @@
 		</div>
 	</nav> -->
 
-<div class="container">
-	<div align="right" class="row">
-		<div class="col-lg-3">
+<div style="" class="menu_width container">
+	<div align="" class="row">
+		<!-- <div class="col-lg-3">
 			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="" rel="homepage"><img src="<?php the_field('navigation_logo', 'option'); ?>"></a>
-		</div>
-		<div align="" class="cta_advisor col-lg-9">
+		</div> -->
+		<div align="right" class="cta_advisor col-lg-12">
 			<ul class="">
 				<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>students-faculty"><i class="fas fa-key"></i> Students &amp; Faculty</a></li>
 				<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>alumni"><i class="fas fa-user"></i> Alumni </a></li>
@@ -47,7 +47,9 @@
 			</ul>
 			<a href="<?php the_field('button_url', 'option'); ?>" class="btn btn-primary"><?php the_field('button_text', 'option'); ?></a>
 		</div>
-	</div>
+		<div align="" class="logo_frame col-lg-12 col-md-4 col-sm-12 col-12">
+			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="" rel="homepage"><img src="<?php the_field('navigation_logo', 'option'); ?>"></a>
+		</div>
 	<!-- <nav class="navbar navbar-expand-lg">
 		<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="" rel="homepage"><img src="<?php the_field('navigation_logo', 'option'); ?>"></a>
 
@@ -71,11 +73,17 @@
 	    </ul>
 	  </div>
 	</nav> -->
-		<div align="right" class="row">
-			<div class="col-lg-4">
+			<div class="col-lg-2 d-md-none d-lg-block">
 			</div>
-			<div class="col-lg-8">
-		<?php ubermenu( 'main' ); ?>
+			<div align="right" style="background: #f1f2f2;" class="col-lg-10 col-md-7 col-sm-3 col-4">
+				<?php ubermenu( 'main' ); ?>
+				<a class="shiftnav-toggle shiftnav-toggle-button" data-shiftnav-target="shiftnav-main"><i class="fa fa-bars"></i> Menu</a>
+			</div>
+			<div align="center" style="background: #f1f2f2;" class="cta_search_mobile col-md-1 col-sm-2 col-2">
+				<i class="fas fa-search"></i>
+			</div>
+			<div align="center" class="cta_advisor_mobile col-sm-7 col-6">
+				<a href="<?php the_field('button_url', 'option'); ?>" class="btn btn-primary"><?php the_field('button_text', 'option'); ?></a>
 			</div>
 		</div>
 </div>

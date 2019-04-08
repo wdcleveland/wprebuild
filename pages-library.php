@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Academics (Text Only) Page
+ * Template Name: Library (Adv) Page
  * The main template file
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -27,102 +27,82 @@
   		<div class="col-md-9 page_header page_about">
         <div class="row">
           <div class="col-md-12">
-    			<h1><?php the_title(); ?></h1>
+  			    <h1><?php the_title(); ?></h1>
 
-          <!-- MAIN IMAGE -->
-          <?php
+            <!-- MAIN IMAGE -->
+            <?php
 
-          $image = get_field('main_img');
+            $image = get_field('main_img');
 
-          if( !empty($image) ): ?>
+            if( !empty($image) ): ?>
 
-          <img class="main_image" src="<?php echo $image['url']; ?>" alt="<?php the_field('custom_alt_text'); ?>" />
+            <img class="main_image" src="<?php echo $image['url']; ?>" alt="<?php the_field('custom_alt_text'); ?>" />
 
-          <?php endif; ?>
-          <!-- MAIN IMAGE -->
+            <?php endif; ?>
 
-          <?php the_field('body_content'); ?>
+            <?php the_post_thumbnail(); ?>
+
+            <!-- PAGE BLOCKS -->
+
+            <?php if( get_field('page_blocks') ): ?>
+
+             <div class="col-md-12">
+
+               <?php while( has_sub_field("page_blocks") ): ?>
+
+                 <?php if(get_row_layout() == "paragraph_block"): // BLOCK - paragraph(s) ?>
+
+                   <?php the_sub_field('paragraph_text'); ?>
+
+                 <?php elseif(get_row_layout() == "image_block"): // BLOCK - additional image(s) ?>
+
+                   <?php
+                   $image = get_field('additional_img');
+                   if( !empty($image) ): ?>
+                   	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                   <?php endif; ?>
+
+                 <?php elseif(get_row_layout() == "accordion_block"): // BLOCK - accordion(s) ?>
+
+                   <?php if( have_rows('accordion_content') ): ?>
+            				<div id="accordion" role="tablist">
+            					<?php $i=1; while ( have_rows('accordion_content') ) : the_row(); ?>
+            						<div class="card">
+          						    <div class="card-header" role="tab" id="heading-<?php echo $i; ?>">
+          						      <h3 class="mb-0">
+          						        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" href="#collapse-<?php echo $i; ?>" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="row">
+                                  <div align="left" class="col-md-10">
+                                    <?php the_sub_field('item_title'); ?>
+                                  </div>
+                                  <div align="right" class="col-md-2">
+                                    <i class="fas fa-plus-circle"></i><i class="fas fa-minus-circle"></i>
+                                  </div>
+                                </div>
+          						        </button>
+          						      </h3>
+          						    </div>
+            						    <div id="collapse-<?php echo $i; ?>" class="collapse" role="tabpanel" data-parent="#accordion" aria-labelledby="heading-<?php echo $i; ?>">
+            						      <div class="card-body">
+            						       	<?php the_sub_field('item_description'); ?>
+            						      </div>
+            						    </div>
+            						</div>
+            					<?php $i++; endwhile; ?>
+            				</div>
+            			<?php endif; ?>
+
+                 <?php endif; ?>
+
+               <?php endwhile; ?>
+
+             </div>
+
+             <?php endif; ?>
+
           </div>
-
-          <!-- <div class="accordion" id="accordionExample">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h3 class="mb-0">
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <div class="row">
-                      <div align="left" class="col-md-10">
-                        Our Mission
-                      </div>
-                      <div align="right" class="col-md-2">
-                        <i class="fas fa-plus-circle"></i>
-                      </div>
-                    </div>
-                  </button>
-                </h3>
-              </div>
-
-              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>
-                    The Cleveland vision is to be recognized and respected as a leader in health promotion.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h3 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <div class="row">
-                      <div align="left" class="col-md-10">
-                        Our Mission
-                      </div>
-                      <div align="right" class="col-md-2">
-                        <i class="fas fa-plus-circle"></i>
-                      </div>
-                    </div>
-                  </button>
-                </h3>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>
-                    The Cleveland mission is to provide strong student-centered academic and professional education with a focus in the areas of life sciences and health promotion through education, scholarship and service.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <h3 class="mb-0">
-                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <div class="row">
-                      <div align="left" class="col-md-10">
-                        Our Mission
-                      </div>
-                      <div align="right" class="col-md-2">
-                        <i class="fas fa-plus-circle"></i>
-                      </div>
-                    </div>
-                  </button>
-                </h3>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                  <p>
-                    Test. Test. Test.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
         </div>
       </div>
-
-
-
-
 
       <div class="col-md-3 blog_sidebar">
         <div>
@@ -171,6 +151,7 @@
 
         </div>
   			<!-- <a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a> -->
+
         <?php if( have_rows('individual_buttons') ): ?>
 
             <?php while ( have_rows('individual_buttons') ) : the_row(); ?>
@@ -189,7 +170,6 @@
   		</div>
   	</div>
   </div>
-
   <div class="container-fluid">
     <div id="hp_cta_bottom" align="center" class="row" style="height: 250px;">
       <div class="col-md-12" style="background-color: rgba(253, 163, 31, 0.8);">

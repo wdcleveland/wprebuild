@@ -1,7 +1,15 @@
+forms
+move everything to url
+
+double check COPy
+make QA CHECKLIST
+
+BUTTONS ON SIDEBAR
+
+CSV to xml (troubleshooting)
+
 NOTES
 
-- change image from ARRAY to url
-- add alt text ACF
 - get events on HOMEPAGE
 - comb through CSS
 
@@ -9,6 +17,17 @@ CONTENTS
 
 - About us
 -
+
+
+PLUG IN EMPLOYEES
+PLUG IN Events
+PLUG IN NEWS/BLOGS
+
+Custom 404
+Forms
+
+Rich Snippets URL
+
 
 
 blog_sidebar
@@ -22,3 +41,47 @@ RECRUIT/TRAIN SCOTT
 Fix Scotts issue
 Any issues with Jalonna
 E-Book landing page
+
+
+
+
+Open Bugs:
+
+Active class for BIGGER menus
+(Hidden Pages)
+Employee Departments
+(Pulling, Order)
+
+
+Gravity Forms
+(Classifieds)
+Gravity forms
+(api?!)
+DON'T SAVE SSN
+Gravity forms saving before API (Campus CRM)
+FN LN datetime email
+
+
+COPY:
+
+Admissions/Academics
+Forms
+HOMEPAGE
+
+Work Study:
+
+blogs
+news
+
+
+
+CHECKLIST
+QA
+
+sd
+
+
+
+
+
+TRANSFER GUIDES

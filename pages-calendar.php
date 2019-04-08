@@ -103,8 +103,8 @@
           </script>
 
         </div>
-  			<!-- <a id="blog_campus_tour" href="https://www.cleveland.edu/admissions/visit-campus" class="btn btn-primary">Campus Tour</a> -->
-        <a id="blog_refer_student" href="https://www.cleveland.edu/alumni-events/send-a-student" class="btn btn-primary">CleveLand At A Glance</a>
+        <a id="" href="<?php echo esc_url( home_url( '/' ) ); ?>admissions/visit-campus" class="btn btn-primary">Campus Tour</a>
+
   			<div class="blog_events">
   				<h2>News</h2>
   				<a href="https://www.cleveland.edu/about-us/cleveland-at-a-glance" class="btn btn-primary">View All News</a>
