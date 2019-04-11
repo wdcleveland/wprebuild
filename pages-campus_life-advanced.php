@@ -142,7 +142,7 @@
 
             <?php while ( have_rows('individual_buttons') ) : the_row(); ?>
 
-                <a id="" href="<?php the_sub_field('button_url'); ?>" class="btn btn-primary"><?php the_sub_field('button_text'); ?></a>
+              <a id="" href="<?php echo esc_url( home_url( '/' ) ); ?><?php the_sub_field('button_url'); ?>" class="btn btn-primary"><?php the_sub_field('button_text'); ?></a>
 
             <?php endwhile; ?>
 

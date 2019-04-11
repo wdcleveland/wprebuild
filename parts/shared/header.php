@@ -47,7 +47,7 @@
 			</ul>
 			<a href="<?php the_field('button_url', 'option'); ?>" class="btn btn-primary"><?php the_field('button_text', 'option'); ?></a>
 		</div>
-		<div align="" class="logo_frame col-lg-12 col-md-4 col-sm-12 col-12">
+		<div align="" class="logo_frame col-lg-12 col-md-3 col-sm-12 col-12">
 			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="" rel="homepage"><img src="<?php the_field('navigation_logo', 'option'); ?>"></a>
 		</div>
 	<!-- <nav class="navbar navbar-expand-lg">
@@ -73,9 +73,9 @@
 	    </ul>
 	  </div>
 	</nav> -->
-			<div class="col-lg-2 d-md-none d-lg-block">
+			<div class="col-lg-3 d-md-none d-lg-block">
 			</div>
-			<div align="right" style="background: #f1f2f2;" class="col-lg-10 col-md-7 col-sm-3 col-4">
+			<div align="right" style="background: #f1f2f2;" class="col-lg-9 col-md-8 col-sm-3 col-4">
 				<?php ubermenu( 'main' ); ?>
 				<a class="shiftnav-toggle shiftnav-toggle-button" data-shiftnav-target="shiftnav-main"><i class="fa fa-bars"></i> Menu</a>
 			</div>

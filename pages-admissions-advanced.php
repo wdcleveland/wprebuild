@@ -85,6 +85,43 @@
             						    <div id="collapse-<?php echo $i; ?>" class="collapse" role="tabpanel" data-parent="#accordion" aria-labelledby="heading-<?php echo $i; ?>">
             						      <div class="card-body">
             						       	<?php the_sub_field('item_description'); ?>
+                                <?php if ( is_page( 'admissions/visit-campus/' ) ) {
+                                  the_sub_field('optional_code');
+                                  // echo '<div class="page_calendar">';
+                                  //   $args = array( 'post_type' => 'Event',  'event-type' => 'Main Calendar', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' );
+                                  //   $loop = new WP_Query( $args );
+                                  //   while ( $loop->have_posts() ) : $loop->the_post();
+                                  //     echo '<div class="event_single row"><div align="center" class="col-md-2"><div class="calendar_bg"><div class="calendar_month">';
+                                  //     // echo $date->format('M');
+                                  //     if(get_field('date'))
+                                  //         {
+                                  //           $date = DateTime::createFromFormat('F j, Y', get_field('date'));
+                                  //           echo $date->format('M');
+                                  //           echo '</div><div class="calendar_day">';
+                                  //           echo $date->format('j');
+                                  //         }
+                                  //     // echo '</div><div class="calendar_day">';
+                                  //     // echo $date->format('j');
+                                  //     echo '</div></div></div><div class="col-md-10"><a href="';
+                                  //     esc_url( the_permalink() );
+                                  //     echo '">';
+                                  //     the_field('display_name');
+                                  //     echo '</a><p class="event_date_time"><i class="far fa-clock"></i>';
+                                  //     the_field('start_time');
+                                  //     echo ' - ';
+                                  //     the_field('end_time');
+                                  //     echo'<br><i class="fas fa-map-marker-alt"></i>';
+                                  //     the_field('location');
+                                  //     echo'</p><a class="btn btn-primary" href="';
+                                  //     esc_url( the_permalink() );
+                                  //     echo '">Learn More</a></div></div>';
+                                  //
+                                  //   endwhile;
+                                  // echo '</div>';
+} else {
+    echo '<br>';
+} ?>
+
             						      </div>
             						    </div>
             						</div>

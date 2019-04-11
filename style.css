@@ -195,6 +195,9 @@ font-style: italic; */
 /* SECTION 01:
 Cheats, Quick Fixes, Misc. */
 
+.fs_style_18 {
+  color: #B22E2E;
+}
 
 
 /* SECTION 02:
@@ -1069,7 +1072,7 @@ div#hp_dp:hover {
   font-weight: 600;
   font-size: 30px;
   text-transform: capitalize;
-  padding-top: 1.5em;
+  padding-top: 5em;
 }
 
 #hp_experience h1 {
@@ -1097,6 +1100,9 @@ div#hp_dp:hover {
   display: none;
 }
 
+a.btn-hp-fix {
+  margin: 3.5em !important;
+}
 
 
 div#hp_dp a.btn.btn-homepage {
@@ -1253,7 +1259,6 @@ div.hp_padding {
 } */
 
 .nav-link div.student_highlight {
-  background-image: url("https://www.cleveland.edu/data/news/thumbs/410.large.jpg");
   background-position: center;
   background-size: cover !important;
   padding: 0;
@@ -1270,7 +1275,6 @@ div.hp_padding {
 }
 
 .nav-link:hover div.student_highlight {
-  background-image: url("https://www.cleveland.edu/data/news/thumbs/410.large.jpg");
   background-position: center;
   background-size: cover !important;
   padding: 0;
@@ -1286,7 +1290,6 @@ div.hp_padding {
 }
 
 .nav-link.active div.student_highlight {
-  background-image: url("https://www.cleveland.edu/data/news/thumbs/410.large.jpg");
   background-position: center;
   background-size: cover !important;
   padding: 0;
@@ -2238,6 +2241,10 @@ div.footer_copyright ul li a:hover {
 
 /* Small devices (landscape phones, 34em and up) */
 @media only screen and (min-width: 34em) {
+
+  #hp_main h1 {
+    padding-top: 5em;
+  }
 }
 
 /* Medium devices (tablets, 48em and up) */
@@ -2284,7 +2291,8 @@ div.footer_copyright ul li a:hover {
 
 
     div#hp_main h1 {
-      font-size: 3rem;
+      font-size: 45px;
+      padding-top: 3.5em;
     }
 
     div#hp_main a.btn.btn-homepage {
@@ -2348,21 +2356,25 @@ div.footer_copyright ul li a:hover {
 
     .img_background h2 {
       font-size: 21px;
-      padding-top: 5.5rem;
+      padding-top: 3rem;
+    }
+
+    a.btn-hp-fix {
+      margin: 3em !important;
     }
 
     .img_background h2 span {
       font-size: 18px ;
     }
 
-    #hp_main h1 {
+    /* #hp_main h1 {
       font-size: 60px;
-      padding-top: 5em;
-    }
+      padding-top: 3.5em;
+    } */
 
     #hp_experience h1 {
       font-size: 60px;
-      padding-top: 5em;
+      padding-top: 3em;
     }
 
 
@@ -2454,10 +2466,29 @@ div.footer_copyright ul li a:hover {
     height: 225px;
   }
 
+  .img_background h2 {
+    font-size: 21px;
+    padding-top: 5.5rem;
+  }
+
+  a.btn-hp-fix {
+    margin: 5.5em !important;
+  }
+
+  #hp_experience h1 {
+    font-size: 60px;
+    padding-top: 5em;
+  }
+
 }
 
 /* Extra large devices (large desktops, 75em and up) */
 @media only screen and (min-width: 75em) {
+
+  div#hp_main h1 {
+    font-size: 45px;
+    padding-top: 4.5em;
+  }
 
     .footer-nav {
         display: block;

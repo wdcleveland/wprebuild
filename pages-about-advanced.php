@@ -149,10 +149,26 @@
         <?php else : ?>
 
         <?php endif; ?>
-  			<div class="blog_events">
-  				<h2>News</h2>
-  				<a href="https://www.cleveland.edu/about-us/cleveland-at-a-glance" class="btn btn-primary">View All News</a>
-  			</div>
+        <div class="sidebar_news">
+          <h2>News</h2><br>
+          <?php
+          $args = array( 'post_type' => 'Post',  'post-type' => 'Blog', 'posts_per_page' =>3, 'orderby' => 'menu_order', 'order' => 'ASC' );
+          $loop = new WP_Query( $args );
+          while ( $loop->have_posts() ) : $loop->the_post();
+            echo '<div class="sidebar_border sidebar_padding row"><div class="col-lg-12"><time datetime="';
+            the_time( 'Y-m-d' );
+            echo '" pubdate>Posted ';
+            the_date();
+            echo '</time></div><div class="col-lg-12"><a href="';
+            esc_url( the_permalink() );
+            echo '">';
+            the_title();
+            echo '</a></div></div>';
+
+          endwhile; ?>
+          <a id="" href="<?php echo esc_url( home_url( '/' ) ); ?>news-archive/" class="btn">View All News</a>
+
+        </div>
   		</div>
   	</div>
   </div>

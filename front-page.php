@@ -100,6 +100,10 @@
     }
   }
 
+  /* .nav-link div.student_highlight {
+    background-image: url('<?php the_field('student_img_one'); ?>');
+  } */
+
 </style>
 
   <div class="container-fluid">
@@ -125,7 +129,7 @@
                   <br>
                     <?php the_field('dp_bottom'); ?>
                 </h2>
-                <a class="btn btn-homepage" href="<?php the_field('dp_url'); ?>"><?php the_field('dp_button_text'); ?></a>
+                <a class="btn btn-homepage btn-hp-fix" href="<?php the_field('dp_url'); ?>"><?php the_field('dp_button_text'); ?></a>
               </div>
             </div>
           </div>
@@ -139,7 +143,7 @@
                   <br>
                   <?php the_field('tuition_bottom'); ?>
                 </h2>
-                <a class="btn btn-homepage" href="<?php the_field('tuition_url'); ?>"><?php the_field('tuition_button_text'); ?></a>
+                <a class="btn btn-homepage btn-hp-fix" href="<?php the_field('tuition_url'); ?>"><?php the_field('tuition_button_text'); ?></a>
               </div>
             </div>
           </div>
@@ -153,7 +157,7 @@
                   <br>
                   <?php the_field('fa_bottom'); ?>
                 </h2>
-                <a class="btn btn-homepage" href="<?php the_field('fa_url'); ?>"><?php the_field('fa_button_text'); ?></a>
+                <a class="btn btn-homepage btn-hp-fix" href="<?php the_field('fa_url'); ?>"><?php the_field('fa_button_text'); ?></a>
               </div>
             </div>
           </div>
@@ -169,73 +173,14 @@
           <h2>Hear From Our Students</h2>
         </div>
       </div>
-      <!-- <div class="tab-content" id="testimonialContent">
-        <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="testimony-one-tab">
-          <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
-          <h3>- John Doe</h3>
-        </div>
-        <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="testimony-two-tab">
-          <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
-          <h3>- Jane Doe</h3>
-        </div>
-        <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="testimony-three-tab">
-          <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
-          <h3>- Jack Doe</h3>
-        </div>
-        <div class="tab-pane fade" id="four" role="tabpanel" aria-labelledby="testimony-four-tab">
-          <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
-          <h3>- Johnny Doe Jr.</h3>
-        </div>
-        <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="testimony-five-tab">
-          <p>I'm too motivated to let anything stop me from becoming the change in health care I envision for myself.</p>
-          <h3>- Jim Doe</h3>
-        </div>
-      </div> -->
-      <!-- <ul class="nav nav-tabs nav-justified" id="testimonialTab" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link active" id="testimony-one-tab" data-toggle="tab" href="#one" role="tab" aria-controls="one" aria-selected="true">
-            <div class="student_highlight">
-            </div>
-            <h4>TEST</h4>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="testimony-two-tab" data-toggle="tab" href="#two" role="tab" aria-controls="three" aria-selected="false">
-            <div class="student_highlight">
-            </div>
-            <h4>TEST</h4>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="testimony-three-tab" data-toggle="tab" href="#three" role="tab" aria-controls="two" aria-selected="false">
-            <div class="student_highlight">
-            </div>
-            <h4>TEST</h4>
-          <a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="testimony-four-tab" data-toggle="tab" href="#four" role="tab" aria-controls="four" aria-selected="false">
-            <div class="student_highlight">
-            </div>
-            <h4>TEST</h4>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="testimony-five-tab" data-toggle="tab" href="#five" role="tab" aria-controls="five" aria-selected="false">
-            <div class="student_highlight">
-            </div>
-            <h4>TEST</h4>
-          </a>
-        </li>
-      </ul> -->
 
       <?php if( have_rows('tab_panes') ): ?>
         <div class="tab-content" id="">
-        <?php $row = 1; // number rows ?>
+        <?php $row = a; // number rows ?>
         <?php // Step 2: Loop through rows, now displaying tab contents
          while( have_rows('tab_panes') ): the_row();
         // Display each item as a list ?>
-            <div role="tabpanel" class="tab-pane <?php if($row == 1) {echo 'active';}?>" id="<?php echo $row; ?>">
+            <div role="tabpanel" class="tab-pane <?php if($row == a) {echo 'active';}?>" id="<?php echo $row; ?>">
                 <p><?php the_sub_field('tab_contents'); ?></p>
                 <h3>- <?php the_sub_field('student_name'); ?></h3>
             </div>
@@ -247,7 +192,7 @@
       <!-- Check for parent repeater row -->
       <?php if( have_rows('tab_panes') ): ?>
         <ul class="nav nav-tabs nav-justified" role="tablist">
-        <?php $row = 1; // number rows ?>
+        <?php $row = a; // number rows ?>
         <?php // Step 1: Loop through rows, first displaying tab titles
          while( have_rows('tab_panes') ): the_row();
         //  ?>
@@ -256,10 +201,10 @@
               href="#<?php echo $row; ?>"
               role="tab"
               data-toggle="tab"
-              class="nav-link <?php if($row == 1) {echo 'active';}?>"
+              class="nav-link <?php if($row == a) {echo 'active';}?>"
               >
             <!-- <?php the_sub_field('tab_title'); ?> -->
-            <div class="student_highlight">
+            <div class="student_highlight" style="background-image: url('<?php the_sub_field('student_img'); ?>');">
             </div>
             <h4><?php the_sub_field('tab_title'); ?></h4>
             </a>
@@ -305,7 +250,7 @@
             <br>
             <?php the_field('kc_bottom'); ?>
           </h2>
-          <a class="btn btn-homepage" href="<?php the_field('kc_url'); ?>"><?php the_field('kc_button_text'); ?></a>
+          <a class="btn btn-homepage btn-hp-fix" href="<?php the_field('kc_url'); ?>"><?php the_field('kc_button_text'); ?></a>
         </div>
       </div>
       <div class="col-lg-6 col-md-4 col-sm-12 img_background">
@@ -317,7 +262,7 @@
             <br>
             <?php the_field('cp_bottom'); ?>
           </h2>
-          <a class="btn btn-homepage" href="<?php the_field('cp_url'); ?>"><?php the_field('cp_button_text'); ?></a>
+          <a class="btn btn-homepage btn-hp-fix" href="<?php the_field('cp_url'); ?>"><?php the_field('cp_button_text'); ?></a>
         </div>
       </div>
       <div class="col-lg-6 col-md-4 col-sm-12 img_background">
@@ -329,7 +274,7 @@
             <br>
             <?php the_field('cl_bottom'); ?>
           </h2>
-          <a class="btn btn-homepage" href="<?php the_field('cl_url'); ?>"><?php the_field('cl_button_text'); ?></a>
+          <a class="btn btn-homepage btn-hp-fix" href="<?php the_field('cl_url'); ?>"><?php the_field('cl_button_text'); ?></a>
         </div>
       </div>
     </div>

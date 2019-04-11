@@ -18,12 +18,32 @@
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-<div class="container">
-	<div class="twelve columns">
-		<h2><?php the_title(); ?></h2>
-		<?php the_content(); ?>
-	</div>
-</div>
+
+	  <div class="container">
+	  	<div class="row">
+	  		<div class="col-md-12 page_header page_about">
+	        <div class="row">
+
+	    			<h1><?php the_title(); ?></h1>
+
+	          <!-- MAIN IMAGE -->
+	          <?php
+
+	          $image = get_field('main_img');
+
+	          if( !empty($image) ): ?>
+
+	            <img class="main_image" src="<?php echo $image['url']; ?>" alt="<?php the_field('custom_alt_text'); ?>" />
+
+	          <?php endif; ?>
+	          <!-- MAIN IMAGE -->
+
+	          <div class="col-12"><?php the_field('body_content'); ?></div>
+
+	        </div>
+	      </div>
+	  	</div>
+	  </div>
 
 <?php endwhile; ?>
 
